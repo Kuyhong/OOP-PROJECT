@@ -2,8 +2,8 @@ public class Seat {
     String seatID;
     boolean isBooked;
 
-        Seat(String id) {
-            this.seatID = id;
+        Seat(String seatID) {
+            this.seatID = seatID;
             this.isBooked = false;
         }
 }       

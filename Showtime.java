@@ -8,7 +8,7 @@ public class Showtime {
 
     Showtime(int id, String Title, String date, String time, int hall, int seats) {
         this.showtimeID = id;
-        this.Title = movie;
+        this.Title = Title;
         this.date = date;
         this.time = time;
         this.hallNumber = hall;

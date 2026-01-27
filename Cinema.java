@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+
 public class Cinema {
     private int cinemaID;
-    private String name;
-    private String location;
-    private String contactNumber;
-    private Hall[] halls;
-    private int numberOfHalls;
+    private ArrayList<Hall> halls;
+    private ArrayList<Movie> movies;
+
+    public void addMovie(){
+
+    }
+
+    
 }

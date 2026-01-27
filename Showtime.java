@@ -6,7 +6,7 @@ public class Showtime {
     int hallNumber;
     int availableSeats;
 
-    Showtime(int id, String Title, String date, String time, int hall, int seats) {
+    public Showtime(int id, String Title, String date, String time, int hall, int seats) {
         this.showtimeID = id;
         this.Title = Title;
         this.date = date;

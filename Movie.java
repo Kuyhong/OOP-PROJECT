@@ -5,5 +5,7 @@ public class Movie {
     private int duration;
     private String rating;
     private String director;
+
+    
 }
 

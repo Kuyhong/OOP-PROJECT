@@ -1,13 +1,9 @@
-import java.util.ArrayList;
 
 public class Cinema {
-    private int cinemaID;
-    private ArrayList<Hall> halls;
-    private ArrayList<Movie> movies;
+    Hall[] halls = new Hall[5];
+    Movie[] movies = new Movie[10];
 
-    public void addMovie(){
-
+    public void addMovie(int movieID){
+        
     }
-
-
 }

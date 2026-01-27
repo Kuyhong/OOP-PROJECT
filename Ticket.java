@@ -1,11 +1,11 @@
 public class Ticket {
-    private int ticketID;
-    private Showtime showtime;
-    private Movie movie;
-    private Hall hall;
-    private Seat seat;
-    private double price;
-    private String bookingStatus;
+    int ticketID;
+    Showtime showtime;
+    Movie movie;
+    Hall hall;
+    Seat seat;
+    double price;
+    String bookingStatus;
 
     public Ticket (int ticketID, Showtime showtime, Movie movie, Hall hall, Seat seat, double price, String bookingstatus){
         this.ticketID = ticketID;

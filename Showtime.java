@@ -1,17 +1,13 @@
 public class Showtime {
     int showtimeID;
-    String Title;
+    Movie movie;
     String date;
-    String time;
     int hallNumber;
-    int availableSeats;
 
-    public Showtime(int id, String Title, String date, String time, int hall, int seats) {
+    public Showtime(int id, String date, Movie movie, int hall) {
         this.showtimeID = id;
-        this.Title = Title;
+        this.movie = movie;
         this.date = date;
-        this.time = time;
         this.hallNumber = hall;
-        this.availableSeats = seats;
     }
 }

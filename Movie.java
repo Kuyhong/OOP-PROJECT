@@ -1,12 +1,12 @@
 public class Movie {
     int movieID;
     String title;
-    String genre;
+    String genre;  
     int duration;
-    String rating;
+    double rating;
     String director;
 
-        public Movie(int id, String title, String genre, int duration, String rating, String director) {
+        public Movie(int id, String title, String genre, int duration, double rating, String director) {
             this.movieID = id;
             this.title = title;
             this.genre = genre;

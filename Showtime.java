@@ -2,12 +2,20 @@ public class Showtime {
     int showtimeID;
     Movie movie;
     String date;
-    int hallNumber;
+    String from;
+    String to;
+    Hall hall;
 
-    public Showtime(int id, String date, Movie movie, int hall) {
-        this.showtimeID = id;
+    public Showtime(int showtimeID, String date, Movie movie, Hall hall, String from, String to) {
+        this.showtimeID = showtimeID;
         this.movie = movie;
         this.date = date;
-        this.hallNumber = hall;
+        this.hall = hall;
+        this.from = from;
+        this.to = to;
+    }
+
+    public void view_Showtimes() {
+
     }
 }

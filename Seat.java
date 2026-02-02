@@ -1,11 +1,9 @@
 public class Seat {
-    char row;
-    int col;
+    int seatID;
     boolean isBooked;
 
-    public Seat(char row, int col, boolean isBooked) {
-        this.row = row;
-        this.col = col;
+    public Seat(int seatID, boolean isBooked) {
+        this.seatID = seatID;
         this.isBooked = isBooked;
     }
 

@@ -53,7 +53,7 @@ public class Main {
                 }
             } else if (menu_Choice == 2){
                 for (int i = 0; i < showtimes.length; i++){
-                    showtimes[i].view_Showtimes(showtimes);
+                    showtimes[i].view_Showtimes(showtimes[i]);
                 }
             } else if (menu_Choice == 3){
                 System.out.print("Enter Showtime ID: ");

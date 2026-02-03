@@ -49,7 +49,7 @@ public class Main {
 
             if (menu_Choice == 1) {
                 for (int i = 0; i < movies.length; i++){
-                    movies[i].view_Movies(movies);
+                    movies[i].view_Movies(movies[i]);
                 }
             } else if (menu_Choice == 2){
                 for (int i = 0; i < showtimes.length; i++){
@@ -58,7 +58,7 @@ public class Main {
             } else if (menu_Choice == 3){
                 System.out.print("Enter Showtime ID: ");
                 int showtime_ID = input.nextInt();
-                
+
             } else if (menu_Choice == 4){
 
             }

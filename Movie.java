@@ -15,16 +15,14 @@ public class Movie {
         this.director = director;
     }
 
-    public void view_Movies (Movie[] movies){
-        for (int i=0; i < 10; i++){
-            System.out.println("\n--- Movie ID: " + movies[i].movieID + " ---");
-            System.out.println("Movie title: " + movies[i].title);
-            System.out.println("Genre: " + movies[i].genre);
-            System.out.println("Duration: " + movies[i].duration);
-            System.out.println("Rating: " + movies[i].rating);
-            System.out.println("Director: " + movies[i].director);
+    public void view_Movies (Movie movies){
+            System.out.println("\n--- Movie ID: " + movies.movieID + " ---");
+            System.out.println("Movie title: " + movies.title);
+            System.out.println("Genre: " + movies.genre);
+            System.out.println("Duration: " + movies.duration);
+            System.out.println("Rating: " + movies.rating);
+            System.out.println("Director: " + movies.director);
             System.out.println("--------------------");
-        }
     }
 
 }

@@ -23,6 +23,10 @@ public class Main {
             new Movie(10, "The Avengers", "Action", 143, 8.0, "Joss Whedon"),
         };
 
+        Showtime[] showtimes = {
+            new Showtime
+        }
+
         int ticket_Count = 0;
         Ticket[] tickets = new Ticket[100];
 
@@ -36,14 +40,16 @@ public class Main {
         System.out.println("6. Exit");
 
         System.out.print("- Enter your choice: ");
-        int choice = input.nextInt();
+        int menu_Choice = input.nextInt();
 
-        if (choice == 1){
+        if (menu_Choice == 1) {
             for (int i = 0; i < movies.length; i++){
                 movies[i].view_Movies(movies);
             }
-        } else if (choice == 2){
-            
+        } else if (menu_Choice == 2){
+
+        } else if (menu_Choice == 3){
+            System.out.print("Enter Showtime ID: ");
         }
 
     }

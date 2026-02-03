@@ -7,11 +7,11 @@ public class Seat {
         this.isBooked = isBooked;
     }
 
-    public void book_Seat(){
-        this.isBooked = true;
+    public void book_Seat(Seat[] seats, int index){
+        seats[index].isBooked = true;
     }
 
-    public void unbook_Seat(){
-        this.isBooked = false;
+    public void unbook_Seat(Seat[] seats, int index){
+        seats[index].isBooked = false;
     }
 }       

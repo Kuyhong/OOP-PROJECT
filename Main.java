@@ -24,33 +24,44 @@ public class Main {
         };
 
         Showtime[] showtimes = {
-            new Showtime
-        }
+            new Showtime(1, "1/1/2026", movies[0], halls[0], "8:00 AM", "10:30 AM"),
+            new Showtime(2, "1/1/2026", movies[1], halls[0], "11:00 AM", "2:00 PM"),
+            new Showtime(3, "1/1/2026", movies[2], halls[0], "2:30 PM", "5:00 PM"),
+
+        };
 
         int ticket_Count = 0;
         Ticket[] tickets = new Ticket[100];
+        int menu_Choice = 0;
 
-        System.out.println("Welcome to the cinema!\n");
-        System.out.println("Menu:");  
-        System.out.println("1. View Movies");   
-        System.out.println("2. View showtimes");
-        System.out.println("3. Check seat availability");
-        System.out.println("4. Book a seat");
-        System.out.println("5. Cancel a booking");
-        System.out.println("6. Exit");
+        while (menu_Choice != 6){
+            System.out.println("Welcome to the cinema!\n");
+            System.out.println("Menu:");  
+            System.out.println("1. View Movies");   
+            System.out.println("2. View showtimes");
+            System.out.println("3. Check seat availability");
+            System.out.println("4. Book a seat");
+            System.out.println("5. Cancel a booking");
+            System.out.println("6. Exit");
 
-        System.out.print("- Enter your choice: ");
-        int menu_Choice = input.nextInt();
+            System.out.print("- Enter your choice: ");
+            menu_Choice = input.nextInt();
 
-        if (menu_Choice == 1) {
-            for (int i = 0; i < movies.length; i++){
-                movies[i].view_Movies(movies);
+            if (menu_Choice == 1) {
+                for (int i = 0; i < movies.length; i++){
+                    movies[i].view_Movies(movies);
+                }
+            } else if (menu_Choice == 2){
+                for (int i = 0; i < showtimes.length; i++){
+                    showtimes[i].view_Showtimes(showtimes);
+                }
+            } else if (menu_Choice == 3){
+                System.out.print("Enter Showtime ID: ");
+                int showtime_ID = input.nextInt();
+                
+            } else if (menu_Choice == 4){
+
             }
-        } else if (menu_Choice == 2){
-
-        } else if (menu_Choice == 3){
-            System.out.print("Enter Showtime ID: ");
         }
-
     }
 }

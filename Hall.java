@@ -10,7 +10,7 @@ public class Hall {
         seats = new Seat[30];
         available_Seats = new int[30];
         booked_Seats = new int[30];
-        
+
         for (int i = 0; i < seats.length; i++){
             seats[i] = new Seat(i+1, false);
             available_Seats[i] = 0;
@@ -23,10 +23,10 @@ public class Hall {
         int k = 0;
         for (int i = 0; i < seats.length; i++){
             if (seats[i].isBooked == false){
-                available_Seats[j] = i;
+                available_Seats[j] = i+1;
                 j++;
             } else {
-                booked_Seats[k] = i;
+                booked_Seats[k] = i+1;
                 k++;
             }
         }

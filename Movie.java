@@ -16,7 +16,7 @@ public class Movie {
     }
 
     public void view_Movies (Movie[] movies){
-        for (int i=0; i < movies.length; i++){
+        for (int i=0; i < 10; i++){
             System.out.println("\n--- Movie ID: " + movies[i].movieID + " ---");
             System.out.println("Movie title: " + movies[i].title);
             System.out.println("Genre: " + movies[i].genre);

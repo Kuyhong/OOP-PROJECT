@@ -1,13 +1,14 @@
 public class Movie {
-    int movieID;
-    String title;
-    String genre;  
-    int duration;
-    double rating;
-    String director;
+    private static int movieCounter = 0;
+    private int movieID;
+    private String title;
+    private String genre;  
+    private int duration;
+    private double rating;
+    private String director;
 
-    public Movie(int id, String title, String genre, int duration, double rating, String director) {
-        this.movieID = id;
+    public Movie(String title, String genre, int duration, double rating, String director) {
+        this.movieID = ++movieCounter;
         this.title = title;
         this.genre = genre;
         this.duration = duration;
@@ -15,15 +16,40 @@ public class Movie {
         this.director = director;
     }
 
-    public void view_Movies (Movie movies){
-            System.out.println("\n--- Movie ID: " + movies.movieID + " ---");
-            System.out.println("Movie title: " + movies.title);
-            System.out.println("Genre: " + movies.genre);
-            System.out.println("Duration: " + movies.duration);
-            System.out.println("Rating: " + movies.rating);
-            System.out.println("Director: " + movies.director);
-            System.out.println("--------------------");
+    @Override
+    public String toString() {
+        return "--- Movie ID: " + movieID + " ---\n" +
+               "Title: " + title + "\n" +
+               "Genre: " + genre + "\n" +
+               "Duration: " + duration + " minutes\n" +
+               "Rating: " + rating + "/10\n" +
+               "Director: " + director + "\n" +
+               "--------------------" + "\n";
     }
 
+    public int getMovieID() {
+        return movieID;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+    
 }
 

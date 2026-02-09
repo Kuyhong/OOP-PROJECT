@@ -1,53 +1,37 @@
 public class Hall {
-    char hallID;
-    Seat[] seats;
-    int[] available_Seats;
-    int[] booked_Seats;
+    private static int hallCounter = 0;
+    private char hallID;
+    private String screenType;
+    private static int total_Seats = 100;
+    private String soundSystem;
 
-    public Hall(char hallID){
-        this.hallID = hallID;
-
-        seats = new Seat[30];
-        available_Seats = new int[30];
-        booked_Seats = new int[30];
-
-        for (int i = 0; i < seats.length; i++){
-            seats[i] = new Seat(i+1, false);
-            available_Seats[i] = 0;
-            booked_Seats[i] = 0;
-        }
+    public Hall(String screenType, String soundSystem) {
+        this.hallID = (char)('A' + hallCounter++);
+        this.screenType = screenType;
+        this.soundSystem = soundSystem;
     }
 
-    public void check_Seat_Availability(Seat[] seats){
-        int j = 0;
-        int k = 0;
-        for (int i = 0; i < seats.length; i++){
-            if (seats[i].isBooked == false){
-                available_Seats[j] = i+1;
-                j++;
-            } else {
-                booked_Seats[k] = i+1;
-                k++;
-            }
-        }
+    @Override
+    public String toString() {
+        return "Hall: " + hallID + "\n" +
+               "Screen Type: " + screenType + "\n" +
+               "Total Seats: " + total_Seats + "\n" +
+               "Sound System: " + soundSystem;
     }
 
-    public void print_Available_Seats (int[] available_Seats){
-        System.out.print("Available seats: ");
-        for (int i = 0; i < seats.length; i++){
-            if (available_Seats[i] != 0){
-                System.out.print(available_Seats[i] + " ");
-            }
-        }
+    public char getHallID() {
+        return hallID;
     }
 
-    public void print_Booked_Seats (int[] booked_seats){
-        System.out.print("Booked seats: ");
-        for (int i = 0; i < seats.length; i++){
-            if (booked_Seats[i] != 0){
-                System.out.print(booked_Seats[i] + " ");
-            }
-        }
+    public String getScreenType() {
+        return screenType;
     }
-}
 
+    public int getTotalSeats() {
+        return total_Seats;
+    }
+
+    public String getSoundSystem() {
+        return soundSystem;
+    }
+}   

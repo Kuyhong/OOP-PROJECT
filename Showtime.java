@@ -7,6 +7,7 @@ public class Showtime {
     private String end_Time;
     private Hall hall;
     private int available_Seats;
+    private Ticket[] tickets = new Ticket[hall.getTotalSeats()];
 
     public Showtime(String date, Movie movie, Hall hall, String start_Time, String end_Time) {
         this.showtimeID = ++showtimeCounter;
@@ -27,12 +28,6 @@ public class Showtime {
                "Start Time: " + start_Time + "\n" +
                "End Time: " + end_Time;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
     
     public int getShowtimeID() {
         return showtimeID;
@@ -62,6 +57,10 @@ public class Showtime {
         return available_Seats;
     }
 
+    public static int getShowtimeCounter() {
+        return showtimeCounter;
+    }
+
     public void book_Seat() {
         if (available_Seats > 0) {
             available_Seats--;
@@ -79,4 +78,5 @@ public class Showtime {
             System.out.println("No seat is booked for this showtime.");
         }
     }
+
 }

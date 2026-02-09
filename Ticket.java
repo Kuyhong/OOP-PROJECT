@@ -9,15 +9,16 @@ public class Ticket {
         this.ticketID = ++ticketCounter;
         this.showtime = showtime;
         this.price = price;
-        this.seat_Number = ticketCounter;
+        this.seat_Number = showtime.getHall().getTotalSeats() - showtime.getAvailableSeats() + 1;
     }
 
     @Override
     public String toString() {
-        return "Ticket ID: " + ticketID + "\n" +
+        return "--- Ticket ID: " + ticketID + " ---\n" +
                "Showtime: " + showtime.getShowtimeID() + "\n" +
                "Price: $" + price + "\n" +
-               "Seat Number: " + seat_Number;
+               "Seat Number: " + seat_Number + "\n" +
+               "--------------------" + "\n";
     }
 
     public int getTicketID() {

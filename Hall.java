@@ -34,4 +34,8 @@ public class Hall {
     public String getSoundSystem() {
         return soundSystem;
     }
+
+    public static int getHallCounter() {
+        return hallCounter;
+    }
 }   

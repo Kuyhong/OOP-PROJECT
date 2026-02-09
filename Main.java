@@ -83,6 +83,8 @@ public class Main {
                 for (int i = 0; i < showtimes.length; i++){
                     if (showtimes[i].getShowtimeID() == showtime_ID){
                         showtimes[i].book_Seat();
+                        Ticket ticket = new Ticket(showtimes[i], 5.0);
+                        System.out.println(ticket.toString());
                         break;
                     }
                 }

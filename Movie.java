@@ -51,5 +51,8 @@ public class Movie {
         return director;
     }
     
+    public static int getMovieCounter() {
+        return movieCounter;
+    }
 }
 

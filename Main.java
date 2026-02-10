@@ -71,6 +71,7 @@ public class Main {
                 int showtime_ID = input.nextInt();
                 for (int i = 0; i < showtimes.length; i++){
                     if (showtimes[i].getShowtimeID() == showtime_ID){
+                        System.out.println("Movie: " + showtimes[i].getMovie().getTitle());
                         System.out.println("Available seats: " + showtimes[i].getAvailableSeats());
                         break;
                     }

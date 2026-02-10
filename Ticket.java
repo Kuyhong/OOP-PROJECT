@@ -40,4 +40,5 @@ public class Ticket {
     public static int getTicketCounter() {
         return ticketCounter;
     }
+
 }

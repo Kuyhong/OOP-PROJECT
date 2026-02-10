@@ -7,7 +7,7 @@ public class Showtime {
     private String end_Time;
     private Hall hall;
     private int available_Seats;
-    private Ticket[] tickets;;
+    private Ticket[] tickets;
 
     public Showtime(String date, Movie movie, Hall hall, String start_Time, String end_Time) {
         this.showtimeID = ++showtimeCounter;
@@ -80,4 +80,21 @@ public class Showtime {
         }
     }
 
+    public void add_Ticket(Ticket ticket) {
+        for (int i = 0; i < tickets.length; i++) {
+            if (tickets[i] == null) {
+                tickets[i] = ticket;
+                break;
+            }
+        }
+    }
+
+    public void remove_Ticket(Ticket ticket) {
+        for (int i = 0; i < tickets.length; i++) {
+            if (tickets[i] != null && tickets[i].getTicketID() == ticket.getTicketID()) {
+                tickets[i] = null;
+                break;
+            }
+        }
+    }
 }

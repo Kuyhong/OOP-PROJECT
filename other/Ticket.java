@@ -1,3 +1,6 @@
+package other;
+import other.Showtime;
+
 public class Ticket {
     private static int ticketCounter = 0;
     private int ticketID;

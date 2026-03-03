@@ -1,3 +1,5 @@
+package other;
+
 public class Movie {
     private static int movieCounter = 0;
     private int movieID;

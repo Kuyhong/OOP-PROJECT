@@ -1,15 +1,16 @@
+package other;
+
 public class Hall {
     private static int hallCounter = 0;
     private char hallID;
     private String screenType;
-    private static int total_Seats;
+    private static int total_Seats = 50;
     private String soundSystem;
 
     public Hall(String screenType, String soundSystem) {
         this.hallID = (char)('A' + hallCounter++);
         this.screenType = screenType;
         this.soundSystem = soundSystem;
-        this.total_Seats = 50;
     }
 
     @Override

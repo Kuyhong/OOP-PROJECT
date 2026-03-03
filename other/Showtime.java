@@ -1,3 +1,4 @@
+package other;
 public class Showtime {
     private static int showtimeCounter = 0;
     private int showtimeID;
@@ -7,7 +8,6 @@ public class Showtime {
     private String end_Time;
     private Hall hall;
     private int available_Seats;
-    private Ticket[] tickets;
 
     public Showtime(String date, Movie movie, Hall hall, String start_Time, String end_Time) {
         this.showtimeID = ++showtimeCounter;
@@ -17,7 +17,6 @@ public class Showtime {
         this.start_Time = start_Time;
         this.end_Time = end_Time;
         this.available_Seats = hall.getTotalSeats();
-        this.tickets = new Ticket[hall.getTotalSeats()];
     }
 
     @Override
@@ -77,24 +76,6 @@ public class Showtime {
             System.out.println("Booked seat cancelled successfully! Remaining seats: " + getAvailableSeats());
         } else {
             System.out.println("No seat is booked for this showtime.");
-        }
-    }
-
-    public void add_Ticket(Ticket ticket) {
-        for (int i = 0; i < tickets.length; i++) {
-            if (tickets[i] == null) {
-                tickets[i] = ticket;
-                break;
-            }
-        }
-    }
-
-    public void remove_Ticket(Ticket ticket) {
-        for (int i = 0; i < tickets.length; i++) {
-            if (tickets[i] != null && tickets[i].getTicketID() == ticket.getTicketID()) {
-                tickets[i] = null;
-                break;
-            }
         }
     }
 }

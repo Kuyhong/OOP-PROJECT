@@ -5,14 +5,15 @@ public abstract class Account implements IAccount {
 	private String email;
 	private String password;
 	private String phoneNumber;
-	private String accountID;
+	private int accountID;
+	private static int accountCounter = 0;
 
-	public Account (String name, String email, String password, String phoneNumber, String accountID) {
+	public Account (String name, String email, String password, String phoneNumber) {
 		setName(name);
 		setEmail(email);
 		setPassword(password);
 		setPhoneNumber(phoneNumber);
-		this.accountID = accountID;
+		this.accountID = ++accountCounter;
 	}
 
 	@Override
@@ -22,14 +23,21 @@ public abstract class Account implements IAccount {
 			   "\nPhone Number: " + phoneNumber;
 	}
 
-	@Override 
-	public boolean equals(Object obj) {
-		Account other = (Account) obj;
-		if (other.getEmail().equals(this.getEmail()) && other.getPassword().equals(this.getPassword())) {
-			return true;
-		}
-		return false;
-	}
+	@Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        Account other = (Account) obj;
+        return this.email.equals(other.email);
+    }
 
 	// Getters
 	public String getName() {
@@ -122,4 +130,6 @@ public abstract class Account implements IAccount {
 			return false;
 		}
 	}
+
+	public abstract boolean can(String action);
 }

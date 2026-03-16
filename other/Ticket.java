@@ -1,5 +1,4 @@
 package other;
-import other.Showtime;
 
 public class Ticket {
     private static int ticketCounter = 0;
@@ -49,4 +48,43 @@ public class Ticket {
         return ticketCounter;
     }
 
+    public void setPrice(double price) {
+        if (price >= 0) {
+            this.price = price;
+        } else {
+            System.out.println("Price cannot be negative.");
+        }
+    }
+
+    public void setSeatNumber(int seat_Number) {
+        if (seat_Number > 0) {
+            this.seat_Number = seat_Number;
+        } else {
+            System.out.println("Seat number must be positive.");
+        }
+    }
+
+    public void setShowtime(Showtime showtime) {
+        if (showtime != null) {
+            this.showtime = showtime;
+        } else {
+            System.out.println("Showtime cannot be null.");
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        Ticket other = (Ticket) obj;
+        return this.ticketID == other.ticketID;
+    }
 }

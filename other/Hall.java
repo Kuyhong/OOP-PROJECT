@@ -40,4 +40,4 @@ public class Hall {
     public static int getHallCounter() {
         return hallCounter;
     }
-}   
+}      

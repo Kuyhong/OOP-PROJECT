@@ -61,6 +61,30 @@ public class Showtime {
         return showtimeCounter;
     }
 
+    public void setDate(String date) {
+        this.date = date;
+    }   
+
+    public void setStartTime(String start_Time) {
+        this.start_Time = start_Time;
+    }
+
+    public void setEndTime(String end_Time) {
+        this.end_Time = end_Time;
+    }
+
+    public void setHall(Hall hall) {
+        this.hall = hall;
+    }
+
+    public void setAvailableSeats(int available_Seats) {
+        this.available_Seats = available_Seats;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
     public void book_Seat() {
         if (available_Seats > 0) {
             available_Seats--;
@@ -77,5 +101,21 @@ public class Showtime {
         } else {
             System.out.println("No seat is booked for this showtime.");
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        Showtime other = (Showtime) obj;
+        return this.showtimeID == other.showtimeID;
     }
 }
